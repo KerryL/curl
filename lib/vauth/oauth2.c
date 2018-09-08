@@ -72,7 +72,7 @@ CURLcode Curl_auth_create_oauth_bearer_message(struct Curl_easy *data,
     oauth = aprintf("user=%s\1host=%s\1auth=Bearer %s\1\1", user, host,
                     bearer);
   else
-    oauth = aprintf("user=%s\1host=%s\1port=%ld\1auth=Bearer %s\1\1", user,
+    oauth = aprintf("n,a=%s,\1host=%s\1port=%ld\1auth=Bearer %s\1\1", user,
                     host, port, bearer);
   if(!oauth)
     return CURLE_OUT_OF_MEMORY;
